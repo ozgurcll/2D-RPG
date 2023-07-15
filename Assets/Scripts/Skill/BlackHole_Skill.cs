@@ -30,7 +30,7 @@ public class BlackHole_Skill : Skill
 
         currentBlackHole = newBlackHole.GetComponent<Blackhole_Skill_Controller>();
 
-        currentBlackHole.SetupBlackHole(maxSize, growSpeed, shrinkSpeed, amountOfAttacks, cloneCooldown , blackholeDuration);
+        currentBlackHole.SetupBlackHole(maxSize, growSpeed, shrinkSpeed, amountOfAttacks, cloneCooldown, blackholeDuration);
     }
 
     protected override void Start()
@@ -55,5 +55,10 @@ public class BlackHole_Skill : Skill
         }
 
         return false;
+    }
+
+    public float GetBlackHoleRadius()
+    {
+        return maxSize / 2; 
     }
 }
